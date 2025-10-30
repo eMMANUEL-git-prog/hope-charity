@@ -1,20 +1,20 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import { useState, useEffect } from "react"
-import { Menu, X } from "lucide-react"
+import Link from "next/link";
+import { useState, useEffect } from "react";
+import { Menu, X } from "lucide-react";
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false)
-  const [isScrolled, setIsScrolled] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10)
-    }
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+      setIsScrolled(window.scrollY > 10);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const navLinks = [
     { href: "/", label: "Home" },
@@ -24,7 +24,7 @@ export default function Navbar() {
     { href: "/events", label: "Events" },
     { href: "/blog", label: "Blog" },
     { href: "/contact", label: "Contact" },
-  ]
+  ];
 
   return (
     <nav
@@ -35,13 +35,17 @@ export default function Navbar() {
       <div className="container-custom">
         <div className="flex justify-between items-center h-16">
           <Link href="/" className="text-2xl font-bold text-[#2563EB]">
-            Hope
+            <img src="/logo.webp" alt="hope" className="h-48" />
           </Link>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex gap-8">
             {navLinks.map((link) => (
-              <Link key={link.href} href={link.href} className="text-[#1F2937] hover:text-[#2563EB] transition-colors">
+              <Link
+                key={link.href}
+                href={link.href}
+                className="text-[#1F2937] hover:text-[#2563EB] transition-colors"
+              >
                 {link.label}
               </Link>
             ))}
@@ -84,5 +88,5 @@ export default function Navbar() {
         )}
       </div>
     </nav>
-  )
+  );
 }

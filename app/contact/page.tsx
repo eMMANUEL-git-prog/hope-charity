@@ -1,12 +1,12 @@
-"use client"
+"use client";
 
-import type React from "react"
+import type React from "react";
 
-import { useState } from "react"
-import SectionTitle from "@/components/SectionTitle"
-import Card from "@/components/Card"
-import Button from "@/components/Button"
-import { Mail, Phone, MapPin, Clock, Check } from "lucide-react"
+import { useState } from "react";
+import SectionTitle from "@/components/SectionTitle";
+import Card from "@/components/Card";
+import Button from "@/components/Button";
+import { Mail, Phone, MapPin, Clock, Check } from "lucide-react";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -14,22 +14,24 @@ export default function Contact() {
     email: "",
     subject: "",
     message: "",
-  })
-  const [submitted, setSubmitted] = useState(false)
+  });
+  const [submitted, setSubmitted] = useState(false);
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target
-    setFormData((prev) => ({ ...prev, [name]: value }))
-  }
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    setSubmitted(true)
+    e.preventDefault();
+    setSubmitted(true);
     setTimeout(() => {
-      setSubmitted(false)
-      setFormData({ name: "", email: "", subject: "", message: "" })
-    }, 3000)
-  }
+      setSubmitted(false);
+      setFormData({ name: "", email: "", subject: "", message: "" });
+    }, 3000);
+  };
 
   return (
     <>
@@ -50,14 +52,16 @@ export default function Contact() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             {/* Contact Info */}
             <div>
-              <h2 className="text-2xl font-bold text-[#1E3A8A] mb-8">Contact Information</h2>
+              <h2 className="text-2xl font-bold text-[#1E3A8A] mb-8">
+                Contact Information
+              </h2>
 
               <Card className="mb-6">
                 <div className="flex items-start gap-4">
                   <Phone className="w-6 h-6 text-[#2563EB] flex-shrink-0 mt-1" />
                   <div>
                     <h3 className="font-semibold text-[#1F2937] mb-1">Phone</h3>
-                    <p className="text-[#6B7280]">+1 (555) 123-4567</p>
+                    <p className="text-[#6B7280]">+254 795 198 141</p>
                   </div>
                 </div>
               </Card>
@@ -76,8 +80,12 @@ export default function Contact() {
                 <div className="flex items-start gap-4">
                   <MapPin className="w-6 h-6 text-[#2563EB] flex-shrink-0 mt-1" />
                   <div>
-                    <h3 className="font-semibold text-[#1F2937] mb-1">Address</h3>
-                    <p className="text-[#6B7280]">123 Charity Lane, City, State 12345</p>
+                    <h3 className="font-semibold text-[#1F2937] mb-1">
+                      Address
+                    </h3>
+                    <p className="text-[#6B7280]">
+                      123 Charity Lane, City, State 12345
+                    </p>
                   </div>
                 </div>
               </Card>
@@ -86,9 +94,15 @@ export default function Contact() {
                 <div className="flex items-start gap-4">
                   <Clock className="w-6 h-6 text-[#2563EB] flex-shrink-0 mt-1" />
                   <div>
-                    <h3 className="font-semibold text-[#1F2937] mb-1">Office Hours</h3>
-                    <p className="text-[#6B7280] text-sm">Monday - Friday: 9:00 AM - 5:00 PM</p>
-                    <p className="text-[#6B7280] text-sm">Saturday: 10:00 AM - 2:00 PM</p>
+                    <h3 className="font-semibold text-[#1F2937] mb-1">
+                      Office Hours
+                    </h3>
+                    <p className="text-[#6B7280] text-sm">
+                      Monday - Friday: 9:00 AM - 5:00 PM
+                    </p>
+                    <p className="text-[#6B7280] text-sm">
+                      Saturday: 10:00 AM - 2:00 PM
+                    </p>
                     <p className="text-[#6B7280] text-sm">Sunday: Closed</p>
                   </div>
                 </div>
@@ -98,11 +112,15 @@ export default function Contact() {
             {/* Contact Form */}
             <div className="lg:col-span-2">
               <Card>
-                <h2 className="text-2xl font-bold text-[#1E3A8A] mb-6">Send us a Message</h2>
+                <h2 className="text-2xl font-bold text-[#1E3A8A] mb-6">
+                  Send us a Message
+                </h2>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   {/* Name */}
                   <div>
-                    <label className="block text-sm font-semibold text-[#1F2937] mb-2">Full Name</label>
+                    <label className="block text-sm font-semibold text-[#1F2937] mb-2">
+                      Full Name
+                    </label>
                     <input
                       type="text"
                       name="name"
@@ -116,7 +134,9 @@ export default function Contact() {
 
                   {/* Email */}
                   <div>
-                    <label className="block text-sm font-semibold text-[#1F2937] mb-2">Email Address</label>
+                    <label className="block text-sm font-semibold text-[#1F2937] mb-2">
+                      Email Address
+                    </label>
                     <input
                       type="email"
                       name="email"
@@ -130,7 +150,9 @@ export default function Contact() {
 
                   {/* Subject */}
                   <div>
-                    <label className="block text-sm font-semibold text-[#1F2937] mb-2">Subject</label>
+                    <label className="block text-sm font-semibold text-[#1F2937] mb-2">
+                      Subject
+                    </label>
                     <input
                       type="text"
                       name="subject"
@@ -144,7 +166,9 @@ export default function Contact() {
 
                   {/* Message */}
                   <div>
-                    <label className="block text-sm font-semibold text-[#1F2937] mb-2">Message</label>
+                    <label className="block text-sm font-semibold text-[#1F2937] mb-2">
+                      Message
+                    </label>
                     <textarea
                       name="message"
                       value={formData.message}
@@ -164,7 +188,9 @@ export default function Contact() {
                   {submitted && (
                     <div className="bg-green-50 border border-green-200 rounded-lg p-4 flex items-center gap-3">
                       <Check className="w-6 h-6 text-green-600" />
-                      <span className="text-green-800">Thank you! We'll get back to you soon.</span>
+                      <span className="text-green-800">
+                        Thank you! We'll get back to you soon.
+                      </span>
                     </div>
                   )}
                 </form>
@@ -177,7 +203,10 @@ export default function Contact() {
       {/* Map Section */}
       <section className="section-padding bg-[#F3F4F6]">
         <div className="container-custom">
-          <SectionTitle title="Visit Us" subtitle="Find our location on the map" />
+          <SectionTitle
+            title="Visit Us"
+            subtitle="Find our location on the map"
+          />
           <div className="w-full h-96 bg-gray-300 rounded-2xl overflow-hidden shadow-lg">
             <iframe
               width="100%"
@@ -193,5 +222,5 @@ export default function Contact() {
         </div>
       </section>
     </>
-  )
+  );
 }

@@ -1,5 +1,12 @@
-import Link from "next/link"
-import { Facebook, Twitter, Instagram, Mail, Phone, MapPin } from "lucide-react"
+import Link from "next/link";
+import {
+  Facebook,
+  Twitter,
+  Instagram,
+  Mail,
+  Phone,
+  MapPin,
+} from "lucide-react";
 
 export default function Footer() {
   return (
@@ -10,8 +17,8 @@ export default function Footer() {
           <div>
             <h3 className="text-xl font-bold mb-4">Hope Charity</h3>
             <p className="text-gray-300 text-sm">
-              Dedicated to transforming the lives of orphaned and vulnerable children through education, healthcare, and
-              community support.
+              Dedicated to transforming the lives of orphaned and vulnerable
+              children through education, healthcare, and community support.
             </p>
           </div>
 
@@ -20,22 +27,34 @@ export default function Footer() {
             <h4 className="font-bold mb-4">Quick Links</h4>
             <ul className="space-y-2 text-sm text-gray-300">
               <li>
-                <Link href="/about" className="hover:text-white transition-colors">
+                <Link
+                  href="/about"
+                  className="hover:text-white transition-colors"
+                >
                   About Us
                 </Link>
               </li>
               <li>
-                <Link href="/programs" className="hover:text-white transition-colors">
+                <Link
+                  href="/programs"
+                  className="hover:text-white transition-colors"
+                >
                   Programs
                 </Link>
               </li>
               <li>
-                <Link href="/volunteer" className="hover:text-white transition-colors">
+                <Link
+                  href="/volunteer"
+                  className="hover:text-white transition-colors"
+                >
                   Volunteer
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="hover:text-white transition-colors">
+                <Link
+                  href="/contact"
+                  className="hover:text-white transition-colors"
+                >
                   Contact
                 </Link>
               </li>
@@ -48,7 +67,7 @@ export default function Footer() {
             <ul className="space-y-3 text-sm text-gray-300">
               <li className="flex items-center gap-2">
                 <Phone size={16} />
-                <span>+1 (555) 123-4567</span>
+                <span>+254 795 198 141</span>
               </li>
               <li className="flex items-center gap-2">
                 <Mail size={16} />
@@ -56,7 +75,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-2">
                 <MapPin size={16} />
-                <span>123 Charity Lane, City, State</span>
+                <span>1008 Kimumu, Eldoret, Kenya</span>
               </li>
             </ul>
           </div>
@@ -83,5 +102,5 @@ export default function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }

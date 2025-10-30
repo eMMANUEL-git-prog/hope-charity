@@ -2,7 +2,8 @@ export const programs = [
   {
     id: 1,
     title: "Education Program",
-    description: "Providing quality education and scholarships to underprivileged children.",
+    description:
+      "Providing quality education and scholarships to underprivileged children.",
     image: "/classroom-learning.png",
     fullDescription:
       "Our education program focuses on providing access to quality schooling, tutoring, and scholarships for children who would otherwise lack educational opportunities.",
@@ -10,7 +11,8 @@ export const programs = [
   {
     id: 2,
     title: "Healthcare Initiative",
-    description: "Ensuring access to medical care and health services for all children.",
+    description:
+      "Ensuring access to medical care and health services for all children.",
     image: "/medical-care-and-health-services.jpg",
     fullDescription:
       "We provide regular health checkups, vaccinations, and medical treatment to ensure every child has access to essential healthcare services.",
@@ -18,7 +20,8 @@ export const programs = [
   {
     id: 3,
     title: "Feeding Program",
-    description: "Daily nutritious meals to support healthy growth and development.",
+    description:
+      "Daily nutritious meals to support healthy growth and development.",
     image: "/children-eating-nutritious-meals.jpg",
     fullDescription:
       "Our feeding program ensures that every child receives at least one nutritious meal daily, supporting their physical and cognitive development.",
@@ -31,31 +34,31 @@ export const programs = [
     fullDescription:
       "Through our sponsorship program, donors can directly support a child's education and personal development with regular updates and communication.",
   },
-]
+];
 
 export const testimonials = [
   {
-    name: "Sarah Johnson",
+    name: "Abby Sirma",
     role: "Donor",
     message:
       "Supporting Hope Charity has been one of the most rewarding experiences of my life. Seeing the impact on children's lives is truly inspiring.",
     image: "/professional-woman-headshot.png",
   },
   {
-    name: "Michael Chen",
+    name: "Eliud O. Onsare",
     role: "Volunteer",
     message:
       "The work being done here is incredible. Every volunteer is treated like family, and the children's smiles make it all worthwhile.",
     image: "/professional-man-headshot.png",
   },
   {
-    name: "Emma Davis",
+    name: "Valentine Jones",
     role: "Sponsor",
     message:
       "Watching my sponsored child grow and achieve their dreams has filled my heart with joy. This organization truly makes a difference.",
     image: "/professional-woman-smiling-headshot.png",
   },
-]
+];
 
 export const events = [
   {
@@ -79,7 +82,7 @@ export const events = [
     description: "Learn about our programs and how you can help.",
     image: "/educational-workshop-seminar.jpg",
   },
-]
+];
 
 export const blogPosts = [
   {
@@ -93,15 +96,17 @@ export const blogPosts = [
   {
     id: 2,
     title: "Meet Our Volunteers: Stories of Compassion",
-    excerpt: "Learn about the dedicated volunteers who make our mission possible every single day.",
+    excerpt:
+      "Learn about the dedicated volunteers who make our mission possible every single day.",
     date: "October 25, 2024",
     image: "/volunteers-helping-children.jpg",
   },
   {
     id: 3,
     title: "Success Stories: From Struggle to Success",
-    excerpt: "Read inspiring stories of children who have overcome challenges with our support.",
+    excerpt:
+      "Read inspiring stories of children who have overcome challenges with our support.",
     date: "October 22, 2024",
     image: "/happy-children-smiling.jpg",
   },
-]
+];

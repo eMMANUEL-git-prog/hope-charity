@@ -1,27 +1,29 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import Image from "next/image"
-import Link from "next/link"
-import Button from "@/components/Button"
-import Card from "@/components/Card"
-import SectionTitle from "@/components/SectionTitle"
-import AnimatedSection from "@/components/AnimatedSection"
-import HeroAnimation from "@/components/HeroAnimation"
-import { programs, testimonials } from "@/lib/data"
-import { ChevronLeft, ChevronRight, Heart } from "lucide-react"
+import { useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import Button from "@/components/Button";
+import Card from "@/components/Card";
+import SectionTitle from "@/components/SectionTitle";
+import AnimatedSection from "@/components/AnimatedSection";
+import HeroAnimation from "@/components/HeroAnimation";
+import { programs, testimonials } from "@/lib/data";
+import { ChevronLeft, ChevronRight, Heart } from "lucide-react";
 
 export default function Home() {
-  const [currentTestimonial, setCurrentTestimonial] = useState(0)
-  const [donationAmount, setDonationAmount] = useState(50)
+  const [currentTestimonial, setCurrentTestimonial] = useState(0);
+  const [donationAmount, setDonationAmount] = useState(50);
 
   const nextTestimonial = () => {
-    setCurrentTestimonial((prev) => (prev + 1) % testimonials.length)
-  }
+    setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
+  };
 
   const prevTestimonial = () => {
-    setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length)
-  }
+    setCurrentTestimonial(
+      (prev) => (prev - 1 + testimonials.length) % testimonials.length
+    );
+  };
 
   return (
     <>
@@ -35,9 +37,10 @@ export default function Home() {
                   Making a Difference in Children's Lives
                 </h1>
                 <p className="text-xl text-gray-100 mb-8">
-                  Join us in our mission to provide education, healthcare, and hope to orphaned and vulnerable children.
+                  Join us in our mission to provide education, healthcare, and
+                  hope to orphaned and vulnerable children.
                 </p>
-                <div className="flex gap-4">
+                <div className="flex flex-col lg:flex-row gap-4">
                   <Link href="/donate">
                     <Button size="lg">Support Our Mission</Button>
                   </Link>
@@ -74,7 +77,10 @@ export default function Home() {
           </AnimatedSection>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {programs.map((program, index) => (
-              <AnimatedSection key={program.id} className={`delay-${index * 100}`}>
+              <AnimatedSection
+                key={program.id}
+                className={`delay-${index * 100}`}
+              >
                 <Card className="hover:scale-105 transition-transform duration-300">
                   <div className="relative h-48 mb-4 rounded-lg overflow-hidden">
                     <Image
@@ -84,7 +90,9 @@ export default function Home() {
                       className="object-cover"
                     />
                   </div>
-                  <h3 className="text-xl font-bold text-[#1E3A8A] mb-2">{program.title}</h3>
+                  <h3 className="text-xl font-bold text-[#1E3A8A] mb-2">
+                    {program.title}
+                  </h3>
                   <p className="text-[#6B7280] mb-4">{program.description}</p>
                   <Link href="/programs">
                     <Button variant="secondary" size="sm">
@@ -102,7 +110,10 @@ export default function Home() {
       <section className="section-padding bg-[#F3F4F6]">
         <div className="container-custom">
           <AnimatedSection>
-            <SectionTitle title="What People Say" subtitle="Hear from our donors, volunteers, and sponsors" />
+            <SectionTitle
+              title="What People Say"
+              subtitle="Hear from our donors, volunteers, and sponsors"
+            />
           </AnimatedSection>
           <div className="max-w-3xl mx-auto">
             <AnimatedSection>
@@ -110,23 +121,38 @@ export default function Home() {
                 <div className="mb-6">
                   <div className="relative w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden">
                     <Image
-                      src={testimonials[currentTestimonial].image || "/placeholder.svg"}
+                      src={
+                        testimonials[currentTestimonial].image ||
+                        "/placeholder.svg"
+                      }
                       alt={testimonials[currentTestimonial].name}
                       fill
                       className="object-cover"
                     />
                   </div>
                 </div>
-                <p className="text-lg text-[#1F2937] mb-6 italic">"{testimonials[currentTestimonial].message}"</p>
-                <p className="font-bold text-[#1E3A8A]">{testimonials[currentTestimonial].name}</p>
-                <p className="text-[#6B7280]">{testimonials[currentTestimonial].role}</p>
+                <p className="text-lg text-[#1F2937] mb-6 italic">
+                  "{testimonials[currentTestimonial].message}"
+                </p>
+                <p className="font-bold text-[#1E3A8A]">
+                  {testimonials[currentTestimonial].name}
+                </p>
+                <p className="text-[#6B7280]">
+                  {testimonials[currentTestimonial].role}
+                </p>
 
                 {/* Carousel Controls */}
                 <div className="flex justify-center gap-4 mt-8">
-                  <button onClick={prevTestimonial} className="p-2 hover:bg-[#F3F4F6] rounded-full transition-colors">
+                  <button
+                    onClick={prevTestimonial}
+                    className="p-2 hover:bg-[#F3F4F6] rounded-full transition-colors"
+                  >
                     <ChevronLeft size={24} className="text-[#2563EB]" />
                   </button>
-                  <button onClick={nextTestimonial} className="p-2 hover:bg-[#F3F4F6] rounded-full transition-colors">
+                  <button
+                    onClick={nextTestimonial}
+                    className="p-2 hover:bg-[#F3F4F6] rounded-full transition-colors"
+                  >
                     <ChevronRight size={24} className="text-[#2563EB]" />
                   </button>
                 </div>
@@ -142,10 +168,13 @@ export default function Home() {
           <AnimatedSection>
             <div className="max-w-2xl mx-auto text-center">
               <Heart className="w-16 h-16 text-[#2563EB] mx-auto mb-6" />
-              <h2 className="text-4xl font-bold text-[#1E3A8A] mb-4">Your Generosity Changes Lives</h2>
+              <h2 className="text-4xl font-bold text-[#1E3A8A] mb-4">
+                Your Generosity Changes Lives
+              </h2>
               <p className="text-lg text-[#6B7280] mb-8">
-                Every donation, no matter the size, directly impacts the lives of children in our care. Join thousands
-                of supporters making a real difference.
+                Every donation, no matter the size, directly impacts the lives
+                of children in our care. Join thousands of supporters making a
+                real difference.
               </p>
               <Link href="/donate">
                 <Button size="lg">Donate Now</Button>
@@ -155,5 +184,5 @@ export default function Home() {
         </div>
       </section>
     </>
-  )
+  );
 }
