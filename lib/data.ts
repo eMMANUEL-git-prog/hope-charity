@@ -38,19 +38,20 @@ export const programs = [
 
 export const testimonials = [
   {
+    name: "Eliud O. Onsare",
+    role: "Volunteer",
+    message:
+      "The work being done here is incredible. Every volunteer is treated like family, and the children's smiles make it all worthwhile.",
+    image: "/eliud.png",
+  },
+  {
     name: "Abby Sirma",
     role: "Donor",
     message:
       "Supporting Hope Charity has been one of the most rewarding experiences of my life. Seeing the impact on children's lives is truly inspiring.",
     image: "/professional-woman-headshot.png",
   },
-  {
-    name: "Eliud O. Onsare",
-    role: "Volunteer",
-    message:
-      "The work being done here is incredible. Every volunteer is treated like family, and the children's smiles make it all worthwhile.",
-    image: "/professional-man-headshot.png",
-  },
+
   {
     name: "Valentine Jones",
     role: "Sponsor",
